@@ -46,4 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ------------------------------------------------------------------------
+     FAQ アコーディオン開閉
+     ------------------------------------------------------------------------ */
+  document.querySelectorAll('.faq__item').forEach((item) => {
+    const question = item.querySelector('.faq__question');
+    const answer = item.querySelector('.faq__answer');
+    const icon = item.querySelector('.faq__icon');
+    if (!question || !answer || !icon) return;
+
+    question.addEventListener('click', () => {
+      const isOpen = answer.style.display === 'block';
+      answer.style.display = isOpen ? 'none' : 'block';
+      icon.textContent = isOpen ? '＋' : '−';
+    });
+  });
+
 });

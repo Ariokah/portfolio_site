@@ -515,6 +515,179 @@ section {
 }
 
 /* --------------------------------------------------------------------------
+   Pricing (料金プラン)
+   -------------------------------------------------------------------------- */
+.pricing {
+  background: linear-gradient(180deg, #E8F4FD 0%, #F0F8FF 100%);
+}
+
+.pricing__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pricing__compare {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 560px;
+  margin: 0 auto 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.pricing__compare-heading {
+  font-size: 0.9rem;
+  color: var(--color-text-sub);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.pricing__compare-item {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.pricing__compare-item:last-child {
+  margin-bottom: 0;
+}
+
+.pricing__card {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(26, 115, 232, 0.12);
+  padding: 40px 32px;
+  max-width: 560px;
+  margin: 0 auto;
+  border-top: 5px solid var(--color-main);
+  text-align: center;
+}
+
+.pricing__card-label {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.pricing__card-original {
+  font-size: 1.1rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.pricing__card-arrow {
+  font-size: 1.5rem;
+  color: var(--color-main);
+  margin: 8px 0;
+}
+
+.pricing__card-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-main);
+}
+
+.pricing__card-tax {
+  font-size: 0.85rem;
+  color: var(--color-text-sub);
+}
+
+.pricing__card-list {
+  text-align: left;
+  margin-top: 24px;
+}
+
+.pricing__card-list li {
+  position: relative;
+  list-style: none;
+  padding-left: 32px;
+  margin-bottom: 16px;
+}
+
+.pricing__card-list li:last-child {
+  margin-bottom: 0;
+}
+
+.pricing__card-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--color-main);
+}
+
+.pricing__card-term {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--color-text-sub);
+  text-align: center;
+}
+
+.pricing__card-note {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #999;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   FAQ (よくあるご質問)
+   -------------------------------------------------------------------------- */
+.faq {
+  background-color: var(--color-white);
+}
+
+.faq__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq__list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: #F8FBFF;
+  padding: 20px 24px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.faq__icon {
+  flex-shrink: 0;
+  color: var(--color-main);
+  font-weight: 700;
+}
+
+.faq__answer {
+  padding: 16px 24px;
+  font-size: 0.95rem;
+  color: var(--color-text-sub);
+  display: none;
+}
+
+.faq__answer p {
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
    Responsive (PC: 769px〜)
    -------------------------------------------------------------------------- */
 @media (min-width: 769px) {
