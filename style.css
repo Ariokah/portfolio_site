@@ -306,6 +306,69 @@ section {
 }
 
 /* --------------------------------------------------------------------------
+   Service (サービス内容)
+   -------------------------------------------------------------------------- */
+.service {
+  background-color: var(--color-white);
+}
+
+.service__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.service__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.service__card {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.service__badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #E8F4FD, #D0EAFF);
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-main);
+}
+
+.service__card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service__card-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-sub);
+}
+
+.service__cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn--cta-pill {
+  border-radius: 50px;
+  padding: 16px 40px;
+}
+
+/* --------------------------------------------------------------------------
    Responsive (PC: 769px〜)
    -------------------------------------------------------------------------- */
 @media (min-width: 769px) {
@@ -327,6 +390,10 @@ section {
 
   .btn--cta {
     font-size: 1.2rem;
+  }
+
+  .service__cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
