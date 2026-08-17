@@ -116,11 +116,39 @@ section {
    Hero (ファーストビュー)
    -------------------------------------------------------------------------- */
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: 100px 0 60px;
-  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-bg-gradient-end) 100%);
+  background: linear-gradient(135deg, #E8F4FD 0%, #F0F8FF 40%, #FFFFFF 100%);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(79, 195, 247, 0.1);
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(26, 115, 232, 0.08);
+  z-index: 0;
 }
 
 .hero__inner {
+  position: relative;
+  z-index: 1;
   text-align: center;
 }
 
@@ -131,10 +159,21 @@ section {
   margin-bottom: 20px;
 }
 
+.hero__catch .highlight {
+  color: var(--color-main);
+}
+
 .hero__sub {
   font-size: 1.05rem;
   color: var(--color-text-sub);
   margin-bottom: 32px;
+}
+
+.hero__divider {
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-main-light);
+  margin: 24px auto;
 }
 
 .hero__microcopy {
