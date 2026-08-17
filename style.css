@@ -369,6 +369,152 @@ section {
 }
 
 /* --------------------------------------------------------------------------
+   Results (支援実績)
+   -------------------------------------------------------------------------- */
+.results {
+  background: linear-gradient(180deg, #E8F4FD 0%, #F0F8FF 100%);
+}
+
+.results__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.results__summary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.results__summary-item {
+  text-align: center;
+}
+
+.results__summary-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-main);
+}
+
+.results__summary-label {
+  font-size: 0.9rem;
+  color: var(--color-text-sub);
+}
+
+.results__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.results__card {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  border-top: 4px solid var(--color-main);
+}
+
+.results__card-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  background-color: #E8F4FD;
+  color: var(--color-main);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.results__card-period {
+  color: var(--color-text-sub);
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.results__card-outcome {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.results__authority {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.results__authority-caption {
+  font-size: 0.85rem;
+  color: var(--color-text-sub);
+  margin-top: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Voice (受講者の声)
+   -------------------------------------------------------------------------- */
+.voice {
+  background-color: var(--color-white);
+}
+
+.voice__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.voice__subtitle {
+  text-align: center;
+  color: var(--color-text-sub);
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.voice__score {
+  text-align: center;
+  margin: 16px 0 32px;
+}
+
+.voice__score-label {
+  font-size: 0.9rem;
+  color: var(--color-text-sub);
+}
+
+.voice__score-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-main);
+}
+
+.voice__score-unit {
+  font-size: 1.2rem;
+}
+
+.voice__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.voice__card {
+  background-color: #F8FBFF;
+  border-radius: 12px;
+  padding: 24px;
+  border-left: 4px solid var(--color-main-light);
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.voice__card-quote {
+  display: block;
+  font-size: 2rem;
+  color: var(--color-main-light);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+/* --------------------------------------------------------------------------
    Responsive (PC: 769px〜)
    -------------------------------------------------------------------------- */
 @media (min-width: 769px) {
@@ -394,6 +540,18 @@ section {
 
   .service__cards {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .results__summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .results__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .voice__cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
