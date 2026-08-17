@@ -1,0 +1,169 @@
+/* ==========================================================================
+   採用SNS運用代行サービス LP - style.css
+   ========================================================================== */
+
+:root {
+  --color-white: #FFFFFF;
+  --color-bg-gradient-end: #F0F8FF;
+  --color-main: #1A73E8;
+  --color-main-light: #4FC3F7;
+  --color-accent: #E53935;
+  --color-accent-hover: #C62828;
+  --color-text: #333333;
+  --color-text-sub: #555555;
+  --color-gray: #888888;
+
+  --font-family-base: 'Noto Sans JP', sans-serif;
+
+  --section-padding: 80px 0;
+}
+
+/* --------------------------------------------------------------------------
+   Reset / Base
+   -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: var(--section-padding);
+}
+
+/* --------------------------------------------------------------------------
+   Button
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family-base);
+}
+
+.btn--cta {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 16px;
+  padding: 16px 32px;
+  box-shadow: 0 4px 12px rgba(229, 57, 53, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn--cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(229, 57, 53, 0.5);
+  background-color: var(--color-accent-hover);
+}
+
+/* --------------------------------------------------------------------------
+   Scroll-in Fade Animation
+   -------------------------------------------------------------------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Hero (ファーストビュー)
+   -------------------------------------------------------------------------- */
+.hero {
+  padding: 100px 0 60px;
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-bg-gradient-end) 100%);
+}
+
+.hero__inner {
+  text-align: center;
+}
+
+.hero__catch {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.hero__sub {
+  font-size: 1.05rem;
+  color: var(--color-text-sub);
+  margin-bottom: 32px;
+}
+
+.hero__microcopy {
+  font-size: 0.8rem;
+  color: var(--color-gray);
+  margin-top: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive (PC: 769px〜)
+   -------------------------------------------------------------------------- */
+@media (min-width: 769px) {
+  .hero {
+    padding: 140px 0 80px;
+  }
+
+  .hero__catch {
+    font-size: 2.6rem;
+  }
+
+  .hero__sub {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+
+  .btn--cta {
+    font-size: 1.2rem;
+  }
+}
