@@ -688,6 +688,92 @@ section {
 }
 
 /* --------------------------------------------------------------------------
+   Final CTA (最終CTA)
+   -------------------------------------------------------------------------- */
+.final-cta {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1A73E8 0%, #1565C0 100%);
+  color: var(--color-white);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.final-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.final-cta__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.final-cta__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  margin: 0 auto 24px;
+}
+
+.final-cta__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.final-cta__desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 16px auto 32px;
+  max-width: 480px;
+  line-height: 1.8;
+}
+
+.final-cta__btn {
+  border-radius: 50px;
+  padding: 18px 48px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 16px rgba(229, 57, 53, 0.4);
+}
+
+.final-cta__microcopy {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Footer (フッター)
+   -------------------------------------------------------------------------- */
+.footer {
+  background-color: #222222;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* --------------------------------------------------------------------------
    Responsive (PC: 769px〜)
    -------------------------------------------------------------------------- */
 @media (min-width: 769px) {
