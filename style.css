@@ -813,39 +813,24 @@ section {
   }
 
   .hero__videos {
-    position: relative;
     width: 40%;
-    height: 340px;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     overflow: visible;
     margin-top: 0;
     padding-bottom: 0;
   }
 
   .hero__video {
-    position: absolute;
-    width: 160px;
+    width: 130px;
     min-width: 0;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   }
 
-  .hero__video--1 {
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-
   .hero__video--2 {
-    top: 30px;
-    left: 20px;
-    z-index: 2;
-  }
-
-  .hero__video--3 {
-    top: 60px;
-    left: 40px;
-    z-index: 3;
+    width: 145px;
   }
 
   .hero__catch {
