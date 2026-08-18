@@ -62,4 +62,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ------------------------------------------------------------------------
+     動画の遅延読み込み・再生（画面内に入ったら再生開始）
+     ------------------------------------------------------------------------ */
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const video = entry.target;
+        if (video.hasAttribute('autoplay')) {
+          video.play();
+        }
+        videoObserver.unobserve(video);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('video').forEach(video => {
+    video.pause();
+    videoObserver.observe(video);
+  });
+
 });

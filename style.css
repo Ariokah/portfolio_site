@@ -873,4 +873,17 @@ section {
   .sp-br {
     display: inline;
   }
+
+  .hero__catch {
+    font-size: 1.5rem;
+  }
+
+  .hero__sub {
+    font-size: 0.85rem;
+  }
+
+  .hero .btn--cta {
+    font-size: 0.95rem;
+    padding: 14px 32px;
+  }
 }
